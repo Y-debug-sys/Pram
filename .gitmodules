@@ -1,0 +1,9 @@
+[submodule "baselines/pop-ncflow-lptop"]
+	path = baselines/pop-ncflow-lptop
+	url = https://github.com/harvard-cns/pop-ncflow-lptop.git
+[submodule "baselines/ML/HARP"]
+	path = baselines/ML/HARP
+	url = https://github.com/Purdue-ISL/HARP.git
+[submodule "baselines/ML/Aether"]
+	path = baselines/ML/Aether
+	url = https://github.com/fanyubupt/Aether.git
