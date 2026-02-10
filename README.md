@@ -94,7 +94,7 @@ Or load directly in Python:
 from modelscope import snapshot_download
 
 # Example: Qwen2.5-VL-7B-Instruct
-model_dir = snapshot_download("qwen/Qwen2.5-VL-7B-Instruct")
+model_dir = snapshot_download("mlms/Qwen2.5-VL-7B-Instruct")
 ```
 
 ### 4. Run Pram
