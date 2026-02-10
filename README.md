@@ -15,7 +15,7 @@
         <img src="https://img.shields.io/badge/License-MIT-red.svg" /></a>
 </p>
 
-<p align="center"><img src="Figs/pram.jpg" width="60%"></p>
+<p align="center"><img src="figs/pram.jpg" width="60%"></p>
 
 > 👉 [**Pram**](https://openreview.net/pdf?id=kL9nYFvs6O) is a multimodal language model (MLM)-powered framework for solving multi-commodity flow (MCF) problems, accepted by [`ICLR '26`](https://infocom2026.ieee-infocom.org/). By leveraging the mathematical reasoning ability of MLMs, Pram achieves near-optimal flow allocations while outperforming production-grade LP solvers by several orders of magnitude in speed.
 
