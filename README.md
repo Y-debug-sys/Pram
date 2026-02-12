@@ -5,6 +5,8 @@
         <img src="https://img.shields.io/github/stars/Y-debug-sys/Pram" /></a>
     <a href= "https://github.com/Y-debug-sys/Pram/network/">
         <img src="https://img.shields.io/github/forks/Y-debug-sys/Pram" /></a>
+    <a href= "https://arxiv.org/abs/2602.11057">
+        <img src="https://img.shields.io/badge/arXiv-1234.56789-b31b1b.svg?style=flat" /></a>
     <a href= "https://pytorch.org/">
         <img src="https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white" /></a>
     <a href= "https://huggingface.co/Qwen/">
