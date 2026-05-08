@@ -355,7 +355,8 @@ class PramSolver(object):
             
             # Calculate excess flow beyond capacity on each edge
             excess_flow = torch.relu(flow_on_edges - capacities)
-            Total_excess_flow = excess_flow.sum() 
+            # Total_excess_flow = excess_flow.sum() 
+            Total_excess_flow = excess_flow.max() 
             
             # Calculate maximum achievable flow given capacity constraints
             max_flow = total_flow - Total_excess_flow
@@ -370,7 +371,8 @@ class PramSolver(object):
                 
                 # Recalculate excess flow
                 excess_flow = torch.relu(flow_on_edges - capacities)
-                Total_excess_flow = excess_flow.sum() 
+                # Total_excess_flow = excess_flow.sum() 
+                Total_excess_flow = excess_flow.max() 
                 
                 # Update max flow considering new excess flow
                 max_flow = max_flow - Total_excess_flow
