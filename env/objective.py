@@ -96,14 +96,16 @@ def compute_total_flow(
 
         flow_on_edges = paths_to_edges.transpose(0, 1).matmul(wi)
         excess_flow = torch.relu(flow_on_edges - capacities)
-        Total_excess_flow = excess_flow.sum() 
+        # Total_excess_flow = excess_flow.sum() 
+        Total_excess_flow = excess_flow.max() 
         max_flow = total_flow - Total_excess_flow
 
         while Total_excess_flow != 0:
             wi = wi * max_flow / total_flow
             flow_on_edges = paths_to_edges.transpose(0, 1).matmul(wi)
             excess_flow = torch.relu(flow_on_edges - capacities)
-            Total_excess_flow = excess_flow.sum() 
+            # Total_excess_flow = excess_flow.sum() 
+            Total_excess_flow = excess_flow.max() 
             max_flow = max_flow - Total_excess_flow
         
         max_flow_ratio = max_flow / total_flow
@@ -165,14 +167,16 @@ def compute_concurent_flow(
         total_flow = torch.sum(di)
 
         excess_flow = torch.relu(flow_on_edges - capacities)
-        Total_excess_flow = excess_flow.sum() 
+        # Total_excess_flow = excess_flow.sum() 
+        Total_excess_flow = excess_flow.max() 
         max_flow = total_flow - Total_excess_flow
 
         while Total_excess_flow != 0:
             wi = wi * max_flow / total_flow
             flow_on_edges = paths_to_edges.transpose(0, 1).matmul(wi)
             excess_flow = torch.relu(flow_on_edges - capacities)
-            Total_excess_flow = excess_flow.sum() 
+            # Total_excess_flow = excess_flow.sum() 
+            Total_excess_flow = excess_flow.max() 
             max_flow = max_flow - Total_excess_flow
 
         # max_concurrent = torch.min(edge_ratios)  # scalar
