@@ -123,6 +123,7 @@ def MCF(path_demands, true_demands):
         si = torch.sum(pi, dim=-1)
         # Scale path flows to match true demands
         scale_factor = di / torch.clamp_min(si, min=1e-7)
+        scale_factor = torch.clamp_max(scale_factor, max=1.0)
         pi = pi * scale_factor.unsqueeze(-1).repeat(1, 1, pi.shape[-1])
         pi = torch.sum(pi, dim=-1)
 
