@@ -39,6 +39,10 @@ class LPSolver(object):
         self._num_paths = num_paths
         self._objective = objective
 
+    @property
+    def model(self):
+        return self._solver.model
+
     def _construct_path_lp(self, G, edge_to_paths, num_total_paths, sat_flows):
         """
         Construct the linear program based on paths for multi-commodity flow problem.
